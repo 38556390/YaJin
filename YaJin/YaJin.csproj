@@ -119,6 +119,7 @@
       <DependentUpon>Pwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="bin\Debug\YaJin.vshost.exe.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,7 +131,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\YaJin.exe" />
+    <Content Include="bin\Debug\YaJin.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\YaJin.pdb" />
+    <Content Include="bin\Debug\YaJin.vshost.exe" />
+    <Content Include="bin\x64\Debug\YaJin.exe" />
+    <Content Include="bin\x64\Debug\YaJin.pdb" />
     <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

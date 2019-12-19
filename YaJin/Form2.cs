@@ -691,7 +691,7 @@ namespace YaJin
                     str = "柒";
                     break;
                 case '8':
-                    str = "拐";
+                    str = "捌";
                     break;
                 case '9':
                     str = "玖";

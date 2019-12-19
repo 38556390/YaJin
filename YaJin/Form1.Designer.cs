@@ -212,7 +212,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(117, 21);
             this.textBox14.TabIndex = 19;
-            this.textBox14.Text = "XXXXXX单位";
+            this.textBox14.Text = "珠海市妇幼保健院";
             // 
             // label7
             // 
@@ -581,6 +581,7 @@
             // 
             this.toolStripTextBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.ReadOnly = true;
@@ -865,7 +866,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "票据打印程序";
+            this.Text = "票据打印程序V1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.groupBox1.ResumeLayout(false);

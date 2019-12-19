@@ -28,169 +28,169 @@ namespace YaJin
             #region//保存代码(打印飞机票时不需要此功能)
 
 
-           
-            //if (textBox1.Text == "")
-            //{
-            //    MessageBox.Show("付款单位（人）不能为空！", "ERROR");
-            //    return;
-            //}
-            //if (textBox20.Text == "")
-            //{
-            //    MessageBox.Show("发票号不能为空！", "ERROR");
-            //    return;
-            //}
-            //if (textBox20.Text.Length <3)
-            //{
-            //    MessageBox.Show("发票号至少需填三位数！", "ERROR");
-            //    return;
-            //}
-            //string b = textBox20.Text.Substring(0, 2);//获取前两个英文字母
-            //string i = textBox20.Text.Replace(b, "");//过滤英文字母
-            //int x = 0;
-            //try
-            //{
-            //    x = Convert.ToInt32(i);//转换为数字，清除无效前位0
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("操作失败，发票号第三位起需是数字！", "ERROR");
-            //    return;
-            //}
-            //if (textBox2.Text == "")
-            //{
-            //    MessageBox.Show("第一行收款项目不能为空！", "ERROR");
-            //    return;
-            //}
-            //if (textBox3.Text == "" || wu.IsValidFloat(textBox3.Text) == false)
-            //{
-            //    MessageBox.Show("第一行单价格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (textBox4.Text == "" || wu.IsValidInt(textBox4.Text) == false)
-            //{
-            //    MessageBox.Show("第一行数量格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (wu.IsValidFloat(textBox7.Text) == false)
-            //{
-            //    MessageBox.Show("第二行单价格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (wu.IsValidInt(textBox8.Text) == false)
-            //{
-            //    MessageBox.Show("第二行数量格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (wu.IsValidFloat(textBox11.Text) == false)
-            //{
-            //    MessageBox.Show("第三行单价格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (wu.IsValidInt(textBox12.Text) == false)
-            //{
-            //    MessageBox.Show("第三行数量格式错误！", "ERROR");
-            //    return;
-            //}
-            //string select = "select id from FaPiao where FaPiaoHao='"+textBox20.Text+"'";
-            //if(wu.SelectSQL(select)==true)
-            //{
-            //    MessageBox.Show("操作失败，已存在此发票号！", "ERROR");
-            //    return;
-            //}
 
-            //if (textBox21.Text == "" || wu.IsValidInt2(textBox21.Text) == false)
-            //{
-            //    MessageBox.Show("纸张高度格式错误！", "ERROR");
-            //    return;
-            //}
-            //if (textBox22.Text == "" || wu.IsValidInt2(textBox22.Text) == false)
-            //{
-            //    MessageBox.Show("内容横向度！", "ERROR");
-            //    return;
-            //}
-            //if (textBox23.Text == "" || wu.IsValidInt2(textBox23.Text) == false)
-            //{
-            //    MessageBox.Show("内容纵向度！", "ERROR");
-            //    return;
-            //}
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("付款单位（人）不能为空！", "ERROR");
+                return;
+            }
+            if (textBox20.Text == "")
+            {
+                MessageBox.Show("发票号不能为空！", "ERROR");
+                return;
+            }
+            if (textBox20.Text.Length < 3)
+            {
+                MessageBox.Show("发票号至少需填三位数！", "ERROR");
+                return;
+            }
+            string b = textBox20.Text.Substring(0, 2);//获取前两个英文字母
+            string i = textBox20.Text.Replace(b, "");//过滤英文字母
+            int x = 0;
+            try
+            {
+                x = Convert.ToInt32(i);//转换为数字，清除无效前位0
+            }
+            catch
+            {
+                MessageBox.Show("操作失败，发票号第三位起需是数字！", "ERROR");
+                return;
+            }
+            if (textBox2.Text == "")
+            {
+                MessageBox.Show("第一行收款项目不能为空！", "ERROR");
+                return;
+            }
+            if (textBox3.Text == "" || wu.IsValidFloat(textBox3.Text) == false)
+            {
+                MessageBox.Show("第一行单价格式错误！", "ERROR");
+                return;
+            }
+            if (textBox4.Text == "" || wu.IsValidInt(textBox4.Text) == false)
+            {
+                MessageBox.Show("第一行数量格式错误！", "ERROR");
+                return;
+            }
+            if (wu.IsValidFloat(textBox7.Text) == false)
+            {
+                MessageBox.Show("第二行单价格式错误！", "ERROR");
+                return;
+            }
+            if (wu.IsValidInt(textBox8.Text) == false)
+            {
+                MessageBox.Show("第二行数量格式错误！", "ERROR");
+                return;
+            }
+            if (wu.IsValidFloat(textBox11.Text) == false)
+            {
+                MessageBox.Show("第三行单价格式错误！", "ERROR");
+                return;
+            }
+            if (wu.IsValidInt(textBox12.Text) == false)
+            {
+                MessageBox.Show("第三行数量格式错误！", "ERROR");
+                return;
+            }
+            string select = "select id from FaPiao where FaPiaoHao='" + textBox20.Text + "'";
+            if (wu.SelectSQL(select) == true)
+            {
+                MessageBox.Show("操作失败，已存在此发票号！", "ERROR");
+                return;
+            }
 
-            //string FuKanRen = textBox1.Text;
-            //DateTime FuKanShiJian = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
-            //string FaPiaoHao = textBox20.Text;
+            if (textBox21.Text == "" || wu.IsValidInt2(textBox21.Text) == false)
+            {
+                MessageBox.Show("纸张高度格式错误！", "ERROR");
+                return;
+            }
+            if (textBox22.Text == "" || wu.IsValidInt2(textBox22.Text) == false)
+            {
+                MessageBox.Show("内容横向度！", "ERROR");
+                return;
+            }
+            if (textBox23.Text == "" || wu.IsValidInt2(textBox23.Text) == false)
+            {
+                MessageBox.Show("内容纵向度！", "ERROR");
+                return;
+            }
 
-            ////第一行
-            //string XiangMu1 = textBox2.Text;
-            //float DanJia1 = 0.00F;
-            //int ShuLiang1 = 0;
-            //float JE1 = 0.00F;
-            //if (textBox3.Text != "" && textBox4.Text != "")
-            //{
-            //    DanJia1 = Convert.ToSingle(textBox3.Text);
-            //    ShuLiang1 = Convert.ToInt32(textBox4.Text);
-            //    JE1 = DanJia1 * ShuLiang1;
-            //}
+            string FuKanRen = textBox1.Text;
+            DateTime FuKanShiJian = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
+            string FaPiaoHao = textBox20.Text;
 
-            ////第二行
-            //string XiangMu2 = textBox6.Text;
-            //float DanJia2 = 0.00F;
-            //int ShuLiang2 = 0;
-            //float JE2 = 0.00F;
-            //if (textBox7.Text != "" && textBox8.Text != "")
-            //{
-            //    DanJia2 = Convert.ToSingle(textBox7.Text);
-            //    ShuLiang2 = Convert.ToInt32(textBox8.Text);
-            //    JE2 = DanJia2 * ShuLiang2;
-            //}
+            //第一行
+            string XiangMu1 = textBox2.Text;
+            double DanJia1 = 0.00F;
+            int ShuLiang1 = 0;
+            double JE1 = 0.00F;
+            if (textBox3.Text != "" && textBox4.Text != "")
+            {
+                DanJia1 = Convert.ToDouble(textBox3.Text);
+                ShuLiang1 = Convert.ToInt32(textBox4.Text);
+                JE1 = DanJia1 * ShuLiang1;
+            }
 
-            ////第三行
-            //string XiangMu3 = textBox10.Text;
-            //float DanJia3 = 0.00F;
-            //int ShuLiang3 = 0;
-            //float JE3 = 0.00F;
-            //if (textBox11.Text != "" && textBox12.Text != "")
-            //{
-            //    DanJia3 = Convert.ToSingle(textBox11.Text);
-            //    ShuLiang3 = Convert.ToInt32(textBox12.Text);
-            //    JE3 = DanJia3 * ShuLiang3;
-            //}
+            //第二行
+            string XiangMu2 = textBox6.Text;
+            double DanJia2 = 0.00F;
+            int ShuLiang2 = 0;
+            double JE2 = 0.00F;
+            if (textBox7.Text != "" && textBox8.Text != "")
+            {
+                DanJia2 = Convert.ToDouble(textBox7.Text);
+                ShuLiang2 = Convert.ToInt32(textBox8.Text);
+                JE2 = DanJia2 * ShuLiang2;
+            }
 
-            //float HeJi = JE1 + JE2 + JE3;
-            //textBox17.Text = Convert.ToString(HeJi);
-            //textBox18.Text = MoneyToUpper(textBox17.Text);
-            //string BeiZhu = textBox19.Text;
-            //string ShouKanDanWei = textBox14.Text;
-            //string FuHe = textBox15.Text;
-            //string ShouKanRen = textBox16.Text;
-            //DateTime Ctime = DateTime.Now;
-            //string SysAccount = wu.account;
-            //DateTime Ctime2 = DateTime.Now;
-            //string SysAccount2 = "";
-            //comboBox1.Text = "已打印";
-            //string ZhuangTai = comboBox1.Text;
-            //label10.Text = textBox20.Text;
+            //第三行
+            string XiangMu3 = textBox10.Text;
+            double DanJia3 = 0.00F;
+            int ShuLiang3 = 0;
+            double JE3 = 0.00F;
+            if (textBox11.Text != "" && textBox12.Text != "")
+            {
+                DanJia3 = Convert.ToDouble(textBox11.Text);
+                ShuLiang3 = Convert.ToInt32(textBox12.Text);
+                JE3 = DanJia3 * ShuLiang3;
+            }
 
-            //string insert = "insert into FaPiao (" +
-            //                "FuKanRen,FuKanShiJian,XiangMu1,DanJia1,ShuLiang1,XiangMu2,DanJia2," +
-            //                "ShuLiang2,XiangMu3,DanJia3,ShuLiang3,HeJi,BeiZhu,ShouKanDanWei," +
-            //                "FuHe,ShouKanRen,Ctime,SysAccount,ZhuangTai,Ctime2,SysAccount2,FaPiaoHao" +
-            //                ") values ('" +
-            //                FuKanRen + "','" + FuKanShiJian + "','" + XiangMu1 + "','" + DanJia1 + "','" +
-            //                ShuLiang1 + "','" + XiangMu2 + "','" + DanJia2 + "','" + ShuLiang2 + "','" +
-            //                XiangMu3 + "','" + DanJia3 + "','" + ShuLiang3 + "','" + HeJi + "','" +
-            //                BeiZhu + "','" + ShouKanDanWei + "','" + FuHe + "','" + ShouKanRen + "','" +
-            //                Ctime + "','" + SysAccount + "','" + ZhuangTai + "','" + Ctime2 + "','" +
-            //                SysAccount2 + "','" + FaPiaoHao + "')";
+            double HeJi = JE1 + JE2 + JE3;
+            textBox17.Text = Convert.ToString(HeJi);
+            textBox18.Text = MoneyToUpper(textBox17.Text);
+            string BeiZhu = textBox19.Text;
+            string ShouKanDanWei = textBox14.Text;
+            string FuHe = textBox15.Text;
+            string ShouKanRen = textBox16.Text;
+            DateTime Ctime = DateTime.Now;
+            string SysAccount = wu.account;
+            DateTime Ctime2 = DateTime.Now;
+            string SysAccount2 = "";
+            comboBox1.Text = "已打印";
+            string ZhuangTai = comboBox1.Text;
+            label10.Text = textBox20.Text;
 
-            //if (wu.ExecSQL(insert) == true)
-            //{
-            //    MessageBox.Show("保存成功", "OK");
-            //    //return;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("系统错误，请联系计算机管理科！", "ERROR");
-            //    return;
-            //}
+            string insert = "insert into FaPiao (" +
+                            "FuKanRen,FuKanShiJian,XiangMu1,DanJia1,ShuLiang1,XiangMu2,DanJia2," +
+                            "ShuLiang2,XiangMu3,DanJia3,ShuLiang3,HeJi,BeiZhu,ShouKanDanWei," +
+                            "FuHe,ShouKanRen,Ctime,SysAccount,ZhuangTai,Ctime2,SysAccount2,FaPiaoHao" +
+                            ") values ('" +
+                            FuKanRen + "','" + FuKanShiJian + "','" + XiangMu1 + "','" + DanJia1 + "','" +
+                            ShuLiang1 + "','" + XiangMu2 + "','" + DanJia2 + "','" + ShuLiang2 + "','" +
+                            XiangMu3 + "','" + DanJia3 + "','" + ShuLiang3 + "','" + HeJi + "','" +
+                            BeiZhu + "','" + ShouKanDanWei + "','" + FuHe + "','" + ShouKanRen + "','" +
+                            Ctime + "','" + SysAccount + "','" + ZhuangTai + "','" + Ctime2 + "','" +
+                            SysAccount2 + "','" + FaPiaoHao + "')";
+
+            if (wu.ExecSQL(insert) == true)
+            {
+                MessageBox.Show("保存成功", "OK");
+                //return;
+            }
+            else
+            {
+                MessageBox.Show("系统错误，请联系计算机管理科！", "ERROR");
+                return;
+            }
 
             #endregion
 
@@ -203,17 +203,17 @@ namespace YaJin
             //以下是飞机票尺寸
             //int aHeight = 397 + Convert.ToInt32(textBox21.Text);//设置打印纸张高
             //this.printDocument1.DefaultPageSettings.PaperSize = new PaperSize("Custum", 823, aHeight);//百份之英寸为单位
-            //this.printDocument1.PrintPage += new PrintPageEventHandler(this.MyPrintDocument_PrintPage);
+            this.printDocument1.PrintPage += new PrintPageEventHandler(this.MyPrintDocument_PrintPage);
             //this.printDocument1.DefaultPageSettings.Landscape = false;//横向打印，只在打印飞机票时才需要
             //将写好的格式给打印预览控件以便预览 
-           
+
             printPreviewDialog1.Document = printDocument1;
-            //显示打印预览   
+            //显示打印预览
             //DialogResult result = printPreviewDialog1.ShowDialog();
             //if (result == DialogResult.OK)
-            //    this.printDocument1.Print();  
-           // printDocument1.
-                printDocument1.Print();
+            //    this.printDocument1.Print();
+            // printDocument1.
+            printDocument1.Print();
             #endregion
 
                // textBox20.Text = BianHao(textBox20.Text);//发票号增1
@@ -552,9 +552,9 @@ namespace YaJin
          }
          if (textBox3.Text != "" && textBox4.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox3.Text);
+             double DanJia1 = Convert.ToDouble(textBox3.Text);
              int ShuLiang1 = Convert.ToInt32(textBox4.Text);
-             float JE = DanJia1 * ShuLiang1;
+                double JE = DanJia1 * ShuLiang1;
              textBox5.Text = Convert.ToString(JE);
          }
          heji();
@@ -833,42 +833,45 @@ namespace YaJin
      {
          //第一行
          string XiangMu1 = textBox2.Text;
-         float DanJia1 = 0.00F;
-         int ShuLiang1 = 0;
-         float JE1 = 0.00F;
-         if (textBox3.Text != "" && textBox4.Text != "")
+            //float DanJia1 = 0.00F;
+            double DanJia1 = 0.00F;
+            int ShuLiang1 = 0;
+            //float JE1 = 0.00F;
+            double JE1 = 0.00F;
+            if (textBox3.Text != "" && textBox4.Text != "")
          {
-             DanJia1 = Convert.ToSingle(textBox3.Text);
+             DanJia1 = Convert.ToDouble(textBox3.Text);
              ShuLiang1 = Convert.ToInt32(textBox4.Text);
              JE1 = DanJia1 * ShuLiang1;
          }
 
          //第二行
          string XiangMu2 = textBox6.Text;
-         float DanJia2 = 0.00F;
+            double DanJia2 = 0.00F;
          int ShuLiang2 = 0;
-         float JE2 = 0.00F;
+            double JE2 = 0.00F;
          if (textBox7.Text != "" && textBox8.Text != "")
          {
-             DanJia2 = Convert.ToSingle(textBox7.Text);
+             DanJia2 = Convert.ToDouble(textBox7.Text);
              ShuLiang2 = Convert.ToInt32(textBox8.Text);
              JE2 = DanJia2 * ShuLiang2;
          }
 
          //第三行
          string XiangMu3 = textBox10.Text;
-         float DanJia3 = 0.00F;
+            double DanJia3 = 0.00F;
          int ShuLiang3 = 0;
-         float JE3 = 0.00F;
+            double JE3 = 0.00F;
          if (textBox11.Text != "" && textBox12.Text != "")
          {
-             DanJia3 = Convert.ToSingle(textBox11.Text);
+             DanJia3 = Convert.ToDouble(textBox11.Text);
              ShuLiang3 = Convert.ToInt32(textBox12.Text);
              JE3 = DanJia3 * ShuLiang3;
          }
 
-         float HeJi = JE1 + JE2 + JE3;
-         textBox17.Text = Convert.ToString(HeJi);
+            //float HeJi = JE1 + JE2 + JE3;
+            double HeJi = JE1 + JE2 + JE3;
+            textBox17.Text = Convert.ToString(HeJi);
          textBox18.Text = MoneyToUpper(textBox17.Text);
      }
 
@@ -1115,9 +1118,9 @@ namespace YaJin
          }
          if (textBox7.Text != "" && textBox8.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox7.Text);
+             double DanJia1 = Convert.ToDouble(textBox7.Text);
              int ShuLiang1 = Convert.ToInt32(textBox8.Text);
-             float JE = DanJia1 * ShuLiang1;
+             double JE = DanJia1 * ShuLiang1;
              textBox9.Text = Convert.ToString(JE);
          }
          heji();
@@ -1137,9 +1140,9 @@ namespace YaJin
          }
          if (textBox11.Text != "" && textBox12.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox11.Text);
+             double DanJia1 = Convert.ToDouble(textBox11.Text);
              int ShuLiang1 = Convert.ToInt32(textBox12.Text);
-             float JE = DanJia1 * ShuLiang1;
+                double JE = DanJia1 * ShuLiang1;
              textBox13.Text = Convert.ToString(JE);
          }
          heji();
@@ -1159,9 +1162,9 @@ namespace YaJin
          }
          if (textBox3.Text != "" && textBox4.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox3.Text);
+             double DanJia1 = Convert.ToDouble(textBox3.Text);
              int ShuLiang1 = Convert.ToInt32(textBox4.Text);
-             float JE = DanJia1 * ShuLiang1;
+                double JE = DanJia1 * ShuLiang1;
              textBox5.Text = Convert.ToString(JE);
          }
          heji();
@@ -1181,9 +1184,9 @@ namespace YaJin
          }
          if (textBox7.Text != "" && textBox8.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox7.Text);
+                double DanJia1 = Convert.ToDouble(textBox7.Text);
              int ShuLiang1 = Convert.ToInt32(textBox8.Text);
-             float JE = DanJia1 * ShuLiang1;
+                double JE = DanJia1 * ShuLiang1;
              textBox9.Text = Convert.ToString(JE);
          }
          heji();
@@ -1203,9 +1206,9 @@ namespace YaJin
          }
          if (textBox11.Text != "" && textBox12.Text != "")
          {
-             float DanJia1 = Convert.ToSingle(textBox11.Text);
+                double DanJia1 = Convert.ToDouble(textBox11.Text);
              int ShuLiang1 = Convert.ToInt32(textBox12.Text);
-             float JE = DanJia1 * ShuLiang1;
+                double JE = DanJia1 * ShuLiang1;
              textBox13.Text = Convert.ToString(JE);
          }
          heji();

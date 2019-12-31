@@ -212,7 +212,7 @@
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(117, 21);
             this.textBox14.TabIndex = 19;
-            this.textBox14.Text = "珠海市妇幼保健院";
+            this.textBox14.Text = "XXXX";
             // 
             // label7
             // 
